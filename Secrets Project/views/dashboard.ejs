@@ -1,0 +1,49 @@
+<%- include('partials/header') %>
+
+  <div class="jumbotron text-center">
+    <div class="container">
+
+      <img src="/images/logo.png" alt="Secure Vault Logo" class="logo">
+
+      <h1 class="slogan mt-4">
+        Your Files. Your Privacy. Your Vault.
+      </h1>
+
+      <p class="lead">
+        Securely store, organize, and access your photos, videos,
+        documents, and text files anytime, anywhere.
+      </p>
+
+      <hr>
+
+
+      <div class="btn-group mt-4 mb-4" role="group">
+
+        <a href="/files/image" class="btn btn-outline-primary">
+          📷 Photos
+        </a>
+
+        <a href="/files/video" class="btn btn-outline-primary">
+          🎥 Videos
+        </a>
+
+        <a href="/files/document" class="btn btn-outline-primary">
+          📄 Documents
+        </a>
+
+        <a href="/files/text" class="btn btn-outline-primary">
+          📝 Text Files
+        </a>
+
+      </div>
+      <br>
+
+      <form action="/logout" method="get">
+        <button type="submit" class="btn btn-outline-danger">
+          LOGOUT
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>
