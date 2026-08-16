@@ -32,7 +32,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // PostgreSQL
-const db = new pg.Client({
+const db = new pg.Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {
     rejectUnauthorized: false
