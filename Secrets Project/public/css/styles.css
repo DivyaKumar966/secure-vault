@@ -266,10 +266,17 @@ h1 {
 }
 
 .rowofFile {
-  row-gap: 30px;
-  justify-content: center;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+.boxofFile {
+  flex: 0 0 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
 }
 
 /* Card */
@@ -312,6 +319,83 @@ h1 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+@media (max-width: 900px) {
+  .boxofFile {
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 600px) {
+
+    .social-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 25px 15px;
+        gap: 15px;
+    }
+
+    .social-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-main {
+        padding: 35px 15px;
+    }
+
+    .footer-container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-section p {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-section ul {
+        text-align: center;
+    }
+
+    .contact-list li {
+        justify-content: center;
+    }
+
+    .footer-tagline {
+        display: block;
+        text-align: center;
+    }
+
+    .bottom-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px 15px;
+        gap: 10px;
+    }
+
+    .bottom-content p {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* Badge */
@@ -599,45 +683,70 @@ h1 {
 
     .social-content {
         flex-direction: column;
-
         justify-content: center;
-
+        align-items: center;
         text-align: center;
-
-        padding: 25px;
+        padding: 25px 15px;
+        gap: 15px;
     }
 
+    .social-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-main {
+        padding: 35px 15px;
+    }
+
+    .footer-container {
+        width: 100%;
+        padding: 0 15px;
+    }
 
     .footer-grid {
         grid-template-columns: 1fr;
-
+        gap: 30px;
         text-align: center;
-
-        gap: 35px;
     }
 
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
 
     .footer-section p {
+        max-width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
 
+    .footer-section ul {
+        text-align: center;
+    }
 
     .contact-list li {
         justify-content: center;
     }
 
+    .footer-tagline {
+        display: block;
+        text-align: center;
+    }
 
     .bottom-content {
         flex-direction: column;
-
         justify-content: center;
-
+        align-items: center;
         text-align: center;
-
-        padding: 20px;
+        padding: 20px 15px;
+        gap: 10px;
     }
 
+    .bottom-content p {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* Document/Text icon */
